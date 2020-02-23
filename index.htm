@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Arduino Steuerung</title>
+  <style>
+    body {
+        background-color: #111;
+        color: white;
+		text-decoration: none;
+        font-family: Tahoma;
+    }
+
+    table {
+        margin-left: auto;
+        margin-right: auto;
+    }
+	
+	a {
+		color: #FFF;
+		text-decoration: none;
+	}
+
+    #textbody {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        border: solid 1px;
+        border-color: #333;
+        background-color: #222;
+		padding: 20px;
+    }
+
+    #header {
+        margin-left: 20px;
+        margin-top: 50px;
+        font-size: 16px;
+        font-weight: lighter;
+    }
+
+	h1 {
+		margin-top: -25px;
+	}
+
+    h2 {
+        margin-top: 50px;
+        margin-left: 40px;
+        font-size: 14px;
+		line-height:14px;
+    }
+
+    .button {
+        width: 120px;
+        height: 35px;
+        border: solid 1px;
+        border-color: #333;
+		background-color: #222;
+    }
+
+    .buttontext {
+        margin-left: 50px;
+        margin-top: 7px;
+        font-size: medium;
+    }
+
+    .squareBW {
+        margin-left: auto;
+        margin-right: auto;
+        width: 350px;
+        height: 50px;
+        border: solid 1px;
+        border-color: #333;
+        background-size: 100% 100%;
+        background-image: -webkit-linear-gradient(left, black, white);
+        background-image: -moz-linear-gradient(left, black, white);
+        background-image: -o-linear-gradient(left, black, white);
+        background-image: linear-gradient(left, black, white);"
+    }
+
+    .squareRGB {
+        margin-left: auto;
+        margin-right: auto;
+        width: 350px;
+        height: 50px;
+        border: solid 1px;
+        border-color: #333;
+        background-size: 100% 100%;
+        background-image: -webkit-linear-gradient(left, purple, blue, green, yellow, red, purple);
+        background-image: -moz-linear-gradient(left, purple, blue, green, yellow, red, purple);
+        background-image: -o-linear-gradient(left, purple, blue, green, yellow, red, purple);
+        background-image: linear-gradient(left, purple, blue, green, yellow, red, purple);"
+    }
+
+  </style>
+
+</head>
+<body>
+
+  <div id="textbody">
+  <div id="header">
+    <h1>Light Ctrl - Basis html</h1>
+  </div>
+    <h2>Analog Pin3:</h2>
+	<div id="colorpicker"></div>
+	<table>
+          <tr>
+            <td>
+            <a href="/?pinA3=000" target="ifr">000</a>
+            <a href="/?pinA3=050" target="ifr">050</a>
+            <a href="/?pinA3=150" target="ifr">150</a>
+            <a href="/?pinA3=200" target="ifr">200</a>
+            <a href="/?pinA3=250" target="ifr">250</a>
+			</td>
+		  </tr>
+	</table>
+
+	<h2>Analog Pin5:</h2>
+	<table>
+          <tr>
+            <td>
+    		<a href="/?pinA5=000" target="ifr">000</a>
+            <a href="/?pinA5=050" target="ifr">050</a>
+            <a href="/?pinA5=150" target="ifr">150</a>
+            <a href="/?pinA5=200" target="ifr">200</a>
+            <a href="/?pinA5=250" target="ifr">250</a>
+			</td>
+		  </tr>
+	</table>
+
+	<h2>Analog Pin6:</h2>
+	<table>
+          <tr>
+            <td>
+    		<a href="/?pinA6=000" target="ifr">000</a>
+            <a href="/?pinA6=050" target="ifr">050</a>
+            <a href="/?pinA6=150" target="ifr">150</a>
+            <a href="/?pinA6=200" target="ifr">200</a>
+            <a href="/?pinA6=250" target="ifr">250</a>
+			</td>
+		  </tr>
+	</table>
+
+	<h2>Analog Pin9:</h2>
+	<table>
+          <tr>
+            <td>
+    		<a href="/?pinA9=000" target="ifr">000</a>
+            <a href="/?pinA9=050" target="ifr">050</a>
+            <a href="/?pinA9=150" target="ifr">150</a>
+            <a href="/?pinA9=200" target="ifr">200</a>
+            <a href="/?pinA9=250" target="ifr">250</a>
+			</td>
+		  </tr>
+	</table>
+
+	<h2>Multicolor Pin356:</h2>
+	<table>
+          <tr>
+            <td>
+    		<a href="/?pinM356=255000000" target="ifr">red</a>
+			<a href="/?pinM356=000255000" target="ifr">green</a>
+			<a href="/?pinM356=000000255" target="ifr">blue</a>
+			<a href="/?pinM356=128100050" target="ifr">warm white</a>
+			<br/>
+			<a href="/?pinM356=255255255" target="ifr">white</a>
+			<a href="/?pinM356=000255255" target="ifr">turquoise</a>
+			<a href="/?pinM356=255000255" target="ifr">pink</a>
+			<a href="/?pinM356=255255000" target="ifr">yellow</a>
+			<br/>
+			<a href="/?pinM356=255064000" target="ifr">orange</a>
+			<a href="/?pinM356=255255000" target="ifr">yellow</a>
+    		</td>
+		  </tr>
+	</table>
+
+      <h2>Digital Pin3:</h2>
+
+        <table>
+          <tr>
+            <td>
+              <a href="?pinD3=1" target="ifr"><div class="button"><div class="buttontext">Ein</div></div></a>
+            </td>
+            <td>
+              <a href="/?pinD3=0" target="ifr"><div class="button"><div class="buttontext">Aus</div></div></a>
+            </td>
+          </tr>
+        </table>
+
+	  <h2>Digital Pin5:</h2>
+
+        <table>
+          <tr>
+            <td>
+              <a href="/?pinD5=1" target="ifr"><div class="button"><div class="buttontext">Ein</div></div></a>
+            </td>
+            <td>
+              <a href="/?pinD5=0" target="ifr"><div class="button"><div class="buttontext">Aus</div></div></a>
+            </td>
+          </tr>
+        </table>
+
+	  <h2>Digital Pin6:</h2>
+
+        <table>
+          <tr>
+            <td>
+              <a href="/?pinD6=1" target="ifr"><div class="button"><div class="buttontext">Ein</div></div></a>
+            </td>
+            <td>
+              <a href="/?pinD6=0" target="ifr"><div class="button"><div class="buttontext">Aus</div></div></a>
+            </td>
+          </tr>
+        </table>
+
+		 <h2>Digital Pin9:</h2>
+
+        <table>
+          <tr>
+            <td>
+              <a href="/?pinD9=1" target="ifr"><div class="button"><div class="buttontext">Ein</div></div></a>
+            </td>
+            <td>
+              <a href="/?pinD9=0" target="ifr"><div class="button"><div class="buttontext">Aus</div></div></a>
+            </td>
+          </tr>
+        </table>
+
+		<br/>
+
+      <iframe name="ifr" style="display:none;" width="0" height="0"></iframe>
+</div>
+</body>
+</html>
